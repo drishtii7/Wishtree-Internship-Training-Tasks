@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Arithmetic Opeartions Using Functions</h2>
+
+<p id="add"></p>
+<p id="sub"></p>
+<p id="mul"></p>
+<p id="div"></p>
+<p id="mod"></p>
+
+<script>
+function func_add(p1, p2) {
+  return p1 + p2;
+}
+function func_sub(p1, p2) {
+  return p1 - p2;
+}
+function func_mul(p1, p2) {
+  return p1 * p2;
+}
+function func_div(p1, p2) {
+  return p1/p2;
+}
+function func_mod(p1, p2) {
+  return p1%p2;
+}
+document.getElementById("add").innerHTML = "Addition of 32 and 8 = " + func_add(32,8);
+document.getElementById("sub").innerHTML = "Subtraction of 32 and 8 = "+ func_sub(32,8);
+document.getElementById("mul").innerHTML = "Multiplication of 32 and 8 = "+func_mul(32,8);
+document.getElementById("div").innerHTML = "Division of 32 and 8 = "+func_div(32,8);
+document.getElementById("mod").innerHTML = "Modulus of 32 and 8 = "+func_mod(32,8);
+</script>
+</body>
+</html>

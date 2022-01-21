@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+    <style>
+        button{
+            color: rgb(74, 16, 235);
+        }
+    </style>
+</head>
+<body>
+<h2>Area of circle</h2>
+    <p> Here the radius of circle is 14cm </p>  
+<p>  
+Click the following button to get the area of circle.  
+</p>  
+<p id = "para"></p>   
+<button onclick = "func_circle()"> Calculate Area of Circle</button>  
+<hr>
+<h2>Area of rectangle</h2>
+<p> Here the length is 15cm and width is 4cm </p>  
+<p>  
+Click the following button to get the area of rectangle.  
+</p>    
+<p id = "para1"></p>  
+<button onclick = "func_rect()"> Calculate Area of Rectangle</button>  
+<script>   
+var r = 14;  
+var l = 15;  
+var w = 4;  
+function func_circle()  
+{  
+document.getElementById('para').innerHTML = 'The area of circle with radius 14cm is: ' + Math.PI * r * r ;  
+}
+function func_rect()  
+{  
+document.getElementById('para1').innerHTML = 'The area of rectangle is: ' + l*w ;  
+}
+</script>
+</body>
+</html>

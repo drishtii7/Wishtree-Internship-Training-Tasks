@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Array elements with values : 10,20,30,40,50</h3>
+    <script>
+    var array = [10, 20, 30, 40,50];
+let sum = 0;
+
+for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+}
+document.write("Addition of array elements is : "+sum+"<br><br>");
+document.write("Printing elements with even position : <br>") ;
+for(let a in array){
+    if(a%2==0){
+        document.write(array[a]+"<br>");
+    }
+}
+document.write("<br>")
+const newArray = [...array].reverse()
+document.write("Reversing array elements : <br>");
+document.write(newArray);
+</script>
+</body>
+</html>

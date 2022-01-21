@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: lightgray;
+        }
+        table{
+            color:white;
+            background: black;
+            margin-left: auto;
+            margin-right: auto;
+            border-inline-color: white;
+            border-collapse: collapse;
+        }
+        th, td{
+            text-align: left;
+            font-size:x-large;
+            padding-right: 5px;
+        }
+        td{
+            padding-right: 45px;
+        }
+        caption{
+            font-size:x-large;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <table border="2">
+        <caption><center>Favourite and Least Favourite Things</center></caption>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>Bob</th>
+            <th>Alice</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Favourite</td>
+            <td>Color</td>
+            <td>Blue</td>
+            <td>Purple</td>
+        </tr>
+        <tr>
+            <td>Flavor</td>
+            <td>Banana</td>
+            <td>Chocolate</td>
+        </tr>
+        <tr>
+            <td rowspan="2"> LeastFavourite</td>
+            <td>Color</td>
+            <td>Yellow</td>
+            <td>Pink</td>
+        </tr>
+        <tr>
+            <td>Flavor</td>
+            <td>Mint</td>
+            <td>Walnut</td>
+        </tr>
+    </table>   
+</body>
+</html>
