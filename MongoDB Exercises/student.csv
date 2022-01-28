@@ -1,0 +1,8 @@
+_id,address.city,address.pin,gender,id,marks,name
+61f3d084210132a57b27f9e8,Ahmedabad,380060,Male,101,77,Raj
+61f3d0de210132a57b27f9e9,Gandhinagar,382002,Female,102,62,Nupur
+61f3d108210132a57b27f9ea,Ahmedabad,380060,Female,103,56,Pooja
+61f3d139210132a57b27f9eb,Gandhinagar,382002,Female,104,88,Shloka
+61f3d183210132a57b27f9ec,Surat,335009,Female,105,54,Kavya
+61f3d27f210132a57b27f9ef,Surat,335009,Female,106,54,Riya
+61f3d81c941cdaad008e90d6,Gandhinagar,382002,Male,107,54,Raj
