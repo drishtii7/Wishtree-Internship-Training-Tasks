@@ -11,10 +11,8 @@ class Formdetails extends Component{
         return(
             <>
             {
-                username.length>0 && passw.length > 6 ? <div className='bg-success text-white'>Successful</div> : <div className='bg-success text-white'>Incomplete</div>
+                username.length>0 && passw.length>6 ? <div className='bg-success text-white'>Successfull Login</div> : username.length<0 ? <div className='bg-danger text-white'>'Please Enter Username'</div> : <div className='bg-danger text-white'>'Please Enter 6 digit password'</div>
             }
-            <h3>{username.length? username: 'Please enter username'}</h3>
-            <h3>{passw.length > 6? passw: 'Please enter 6 digit password'}</h3> 
             </>
         )
     }

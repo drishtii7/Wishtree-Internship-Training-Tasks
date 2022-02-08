@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-class Employee2 extends Component {
+class Temp1 extends Component {
   constructor() {
     super();
 
-    this.state = {empid: '',name: '',salary:'',items: [] }
+    this.state = {empid: '',name: '',salary:'',items: [],grade:'' }
   };
 
-  getGrade = (salary) =>{
-    return salary > 200000 ? 'A': salary > 100000 ? 'B' : salary > 50000 ? 'C' :'D'
-
-  }
   handleFormSubmit = (e) => {
     e.preventDefault();
     let items = [...this.state.items];
     items.push({
       empid: this.state.empid,
       name: this.state.name,
-      salary: this.state.salary,
-      grade: this.getGrade(this.state.salary)
-  
+      salary: this.state.salary
     });
-
     this.setState({items, empid: '',name: '',salary:''});
-  
+    let {salary} = this.state;
+    if(e.target.name=='salary'){
+        if(salary>15000){
+            this.setState({grade:'A'});
+            items.push({
+                grade: this.state.grade
+            });
+        }
+        else{
+            this.setState({grade:'B'});
+            items.push({
+                grade: this.state.grade
+            });
+        }
+    }
   };
 
   handleInputChange = (e) => {
@@ -82,7 +89,7 @@ class Employee2 extends Component {
                   <td>{item.empid}</td>
                   <td>{item.name}</td>
                   <td>{item.salary}</td>
-                  <td className={item.grade === 'A' ? 'bg-success' : item.grade === 'B' ? 'bg-warning' : item.grade === 'C' ? 'bg-danger' : 'bg-primary'}>{item.grade}</td>
+                  <td>{items.grade}</td>
                 </tr>
               );
             })}
@@ -93,4 +100,4 @@ class Employee2 extends Component {
     );
   }
 }
-export default Employee2;
+export default Temp1;
