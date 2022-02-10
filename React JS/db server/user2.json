@@ -1,0 +1,6 @@
+{ "user" : [
+	{"id":1,"username":"Admin1","password":"pwd1","status":"active"},
+	{"id":2,"username":"Admin2","password":"pwd2","status":"disable"},
+	{"id":3,"username":"Admin3","password":"pwd3","status":"active"}
+]
+}

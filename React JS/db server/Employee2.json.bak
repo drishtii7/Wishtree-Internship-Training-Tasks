@@ -1,0 +1,7 @@
+{"Employee:[
+	{"id":1,"ename":"Shloka","address":"H123","city":"Ahmedabad"},
+	{"id":2,"ename":"Raj","address":"H1256","city":"Gandhinagar"},
+	{"id":3,"ename":"Shreya","address":"H1925","city":"Gandhinagar"},
+	{"id":4,"ename":"Riya","address":"H919","city":"Ahmedabad"}
+]
+}

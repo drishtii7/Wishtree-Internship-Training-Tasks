@@ -1,0 +1,15 @@
+{	"Employees":[
+	{"id":1,"empname":"Parth","salary":15000,"departmentID":1},
+	{"id":2,"empname":"Shloka","salary":35000,"departmentID":2},
+	{"id":3,"empname":"Shreya","salary":55000,"departmentID":2},
+	{"id":4,"empname":"Raj","salary":45000,"departmentID":3},
+	{"id":5,"empname":"Dhvani","salary":30000,"departmentID":3},
+	{"id":6,"empname":"Vraj","salary":40000,"departmentID":3},
+	{"id":7,"empname":"Neha","salary":35000,"departmentID":1},
+	{"id":8,"empname":"Jhanvi","salary":40000,"departmentID":3},
+	{"id":9,"empname":"Kevin","salary":50000,"departmentID":3}],
+	"Department":[
+	{"id":1,"depname":"Admin"},
+	{"id":2,"depname":"HR"},
+	{"id":3,"depname":"Manager"}]
+}
