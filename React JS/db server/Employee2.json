@@ -1,34 +1,16 @@
 {
   "Employee": [
     {
-      "id": 1,
+      "id": "5",
       "ename": "Shloka",
-      "address": "H1267",
-      "city": "Gandhinagar"
-    },
-    {
-      "id": 2,
-      "ename": "Raj",
-      "address": "H12590",
-      "city": "Gandhinagarr"
-    },
-    {
-      "id": 3,
-      "ename": "Shreya",
-      "address": "H19267",
-      "city": "Delhi"
-    },
-    {
-      "id": 4,
-      "ename": "Riya",
-      "address": "H919",
+      "address": "h988",
       "city": "Ahmedabad"
     },
     {
       "id": "5",
-      "ename": "rahul",
-      "address": "h678",
-      "city": "ahmedabad"
+      "ename": "Shreya",
+      "address": "h456",
+      "city": "Gandhinagar"
     }
   ]
 }

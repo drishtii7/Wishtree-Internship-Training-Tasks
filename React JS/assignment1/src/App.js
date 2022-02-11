@@ -16,6 +16,8 @@ import Product from './Product';
 import Users2 from './Users2'
 import Department from './Department';
 import UpdateEmployee from './UpdateEmployee';
+import Allemployee from './Allemployee';
+import Routing from './Routing';
 function App() {
   return (
     <>
@@ -32,7 +34,9 @@ function App() {
     {/* <Users2/> */}
     {/* <Department/> */}
     <div class="container">
-     <UpdateEmployee/> 
+     {/* <UpdateEmployee/>  */}
+     {/* <Allemployee/> */}
+     <Routing/>
     </div>
     </>
   );

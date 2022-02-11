@@ -1,0 +1,7 @@
+{ "Client":[
+	{"id":1,"clientname":"Raj","phone":9908742234,"area":"Pune"},
+	{"id":2,"clientname":"Harsh","phone":9908742267,"area":"Surat"},
+	{"id":3,"clientname":"Shloka","phone":9908742298,"area":"Ahmedabad"},
+	{"id":4,"clientname":"Mihir","phone":9908742205,"area":"Gandhinagar"},
+	{"id":5,"clientname":"Shreya","phone":9908742255,"area":"Ahmedabad"}]
+}
