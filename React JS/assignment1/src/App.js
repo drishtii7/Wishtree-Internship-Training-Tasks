@@ -8,7 +8,6 @@ import Display2 from  './Display2';
 import InterestCalc from './InterestCalc';
 import EmpSelect from './EmpSelect';
 import Employee3 from './Employee3';
-import Temp1 from './Temp1';
 import Form2 from './Form2';
 import Crud1 from './Crud1';
 import Emp from './Emp';
@@ -18,6 +17,11 @@ import Department from './Department';
 import UpdateEmployee from './UpdateEmployee';
 import Allemployee from './Allemployee';
 import Routing from './Routing';
+import Clientcondition from './Clientcondition';
+import Clientcondition2 from './Clientcondition2';
+import Temp1 from './Temp1';
+import Login from './Login';
+import Login2 from './Login2';
 function App() {
   return (
     <>
@@ -25,7 +29,6 @@ function App() {
     {/* <Employee2/>  */}
     {/* <InterestCalc/>  */}
     {/* <Form1/>  */}
-     {/* <Temp1/> */}
     {/* <EmpSelect/> */}
     {/* <Form2/>  */}
     {/* <Form2/> */}
@@ -36,7 +39,12 @@ function App() {
     <div class="container">
      {/* <UpdateEmployee/>  */}
      {/* <Allemployee/> */}
-     <Routing/>
+     {/* <Clientcondition/>  */}
+     {/* <Clientcondition2/>  */}
+     <Routing/> 
+     {/* <Temp1/> */}
+     {/* <Login/> */}
+     {/* <Login2/> */}
     </div>
     </>
   );

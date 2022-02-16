@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 class Clientapi extends Component{
     constructor(){
         super();
@@ -30,6 +31,7 @@ class Clientapi extends Component{
                                 <td>{item.clientname}</td>
                                 <td>{item.phone}</td>
                                 <td>{item.area}</td>
+                                <td><Link className="btn btn-primary" to={'/clientapi/'+ item.id}>Select</Link></td>
                             </tr>
                             )
                         })}

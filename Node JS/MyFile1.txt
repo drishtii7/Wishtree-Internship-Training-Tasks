@@ -1,0 +1,2 @@
+Hi Node JS,
+Creating sample file for reading data.
