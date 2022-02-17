@@ -9,6 +9,7 @@ class Department extends Component{
     componentDidMount(){
         axios.get("http://localhost:4000/Employees").then(response=>{
             this.setState({Employee: response.data});
+            console.log(response.data);
     })
     axios.get("http://localhost:4000/Department").then(response=>{
             this.setState({Departments: response.data});

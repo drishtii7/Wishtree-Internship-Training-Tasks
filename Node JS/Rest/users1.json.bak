@@ -1,0 +1,17 @@
+[
+	{
+        "name":"Drishti",
+        "password":"pwd123",
+        "id":1
+    },
+   {
+        "name":"Riya",
+        "password":"p124",
+        "id":2
+    },
+   {
+        "name":"Shreya",
+        "password":"p125",
+        "id":3
+    }
+]
