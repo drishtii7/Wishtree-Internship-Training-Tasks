@@ -1,17 +1,1 @@
-{
-    "user1":{
-        "name":"Amit",
-        "password":"2e3",
-        "id":1
-    },
-    "user2":{
-        "name":"YAsh",
-        "password":"2e3uyy",
-        "id":2
-    },
-    "user3":{
-        "name":"Neha",
-        "password":"i89uyy",
-        "id":3
-    }
-}
+{"user1":{"name":"Riya","password":"pwd678","id":1},"user2":{"name":"Shloka","password":"p908","id":2},"user3":{"name":"Smruti","password":"987t","id":3},"user4":{"name":"Parth","password":"pwd568","id":7}}

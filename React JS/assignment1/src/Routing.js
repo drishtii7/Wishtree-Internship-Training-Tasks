@@ -7,11 +7,12 @@ import Vendor from './Vendor';
 import Clientapi from './Clientapi';
 import Clientapi2 from './Clientapi2';
 import Login from './Login';
+import Login3 from './Login3';
+import Signup from './Signup';
+import Dashboard2 from './Dashboard2';
 function Routing(){
     return(
         <>
-        <h2>Routing</h2>
-        <br></br>
         <BrowserRouter>
         <ul>
             {/* <li><Link className="btn btn-success" to="/dashboard">Dashboard</Link></li> */}
@@ -24,8 +25,10 @@ function Routing(){
         </ul>
        
         <Routes>
-            <Route path="/" element={<Login/>}/>
+            <Route path="/" element={<Login3/>}/>
             <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/dashboard2" element={<Dashboard2/>}/>
+            <Route path="/signup" element={<Signup/>}/>
             {/* <Route path="/client" element={<Client/>}/> */}
             {/* <Route path="/client/:cid/:cname" element={<Client2/>}/> */}
           {/* <Route path="/vendor" element={<Vendor/>}/> */}

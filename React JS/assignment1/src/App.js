@@ -23,6 +23,10 @@ import Temp1 from './Temp1';
 import Login from './Login';
 import Login2 from './Login2';
 import GetUsersExp from './GetUsersExp';
+import Signup from './Signup';
+import Dashboard from './Dashboard';
+import Login3 from './Login3';
+import Samplelogin from './Samplelogin';
 function App() {
   return (
     <>
@@ -37,17 +41,20 @@ function App() {
     {/* <Product/> */}
     {/* <Users2/> */}
     {/* <Department/> */}
-    <div className="container">
+    {/* <div className="container"> */}
      {/* <UpdateEmployee/>  */}
      {/* <Allemployee/> */}
      {/* <Clientcondition/>  */}
      {/* <Clientcondition2/>  */}
-     {/* <Routing/>  */}
+     <Routing/> 
+     {/* <Login3/> */}
      {/* <Temp1/> */}
      {/* <Login/> */}
      {/* <Login2/> */}
-     <GetUsersExp/>
-    </div>
+     {/* <GetUsersExp/> */}
+     {/* <Signup/> */}
+     {/* <Samplelogin/> */}
+    {/* </div> */}
     </>
   );
 }

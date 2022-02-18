@@ -6,7 +6,7 @@ function Dashboard(){
         <Link to="/" className='btn btn-success'>Logout</Link>
         <br></br>
         
-        <h5 className="container container-fluid alert alert-success">This is my dashboard.</h5>
+        <h5 className="container container-fluid alert alert-success">This is User dashboard.</h5>
         <h5 className="container container-fluid alert alert-success">Login Successfull.</h5>
         </>
     )
