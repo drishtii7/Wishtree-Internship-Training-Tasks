@@ -27,10 +27,10 @@ import Signup from './Signup';
 import Dashboard from './Dashboard';
 import Login3 from './Login3';
 import Samplelogin from './Samplelogin';
+import Product2 from './Product2';
 function App() {
   return (
     <>
-    <h1><center>Assignment</center></h1>
     {/* <Employee2/>  */}
     {/* <InterestCalc/>  */}
     {/* <Form1/>  */}
@@ -54,6 +54,7 @@ function App() {
      {/* <GetUsersExp/> */}
      {/* <Signup/> */}
      {/* <Samplelogin/> */}
+     {/* <Product2/> */}
     {/* </div> */}
     </>
   );

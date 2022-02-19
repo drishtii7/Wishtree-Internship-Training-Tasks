@@ -10,6 +10,7 @@ import Login from './Login';
 import Login3 from './Login3';
 import Signup from './Signup';
 import Dashboard2 from './Dashboard2';
+import Product2 from './Product2';
 function Routing(){
     return(
         <>
@@ -28,6 +29,7 @@ function Routing(){
             <Route path="/" element={<Login3/>}/>
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/dashboard2" element={<Dashboard2/>}/>
+            <Route path="/product2" element={<Product2/>}/>
             <Route path="/signup" element={<Signup/>}/>
             {/* <Route path="/client" element={<Client/>}/> */}
             {/* <Route path="/client/:cid/:cname" element={<Client2/>}/> */}

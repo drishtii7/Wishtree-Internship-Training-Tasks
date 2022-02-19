@@ -26,9 +26,9 @@ const navigate = useNavigate();
         {
             navigate("/dashboard");
         }
-       else  if (userId === "admin1" && password=== "adpwd" &&item.adminfound === true){
+       else  if (userId === "admin1" && password=== "adpwd" && item.adminfound === true){
             console.log("admin dash");
-            navigate("/dashboard2");
+            navigate("/product2");
         }
         else{
             setMsg("Enter Valid Username or Password");

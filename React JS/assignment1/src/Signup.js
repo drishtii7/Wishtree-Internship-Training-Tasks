@@ -28,10 +28,13 @@ class Signup extends Component{
         let {UserDetail,notify}=this.state;
         return(
             <>
-           <div className='container'>
+            <div className='app'>
+             <div className='login-form'>
+             <div className='form'>
            <form onSubmit={this.onSubmit}>
+           <h4 className='text-center text-success'>Registration Form</h4>
             <div className='form-group'>
-                        <label>Employee ID</label>
+                        <label>User ID</label>
                         <input type="text" className='form-control' name="id" value={UserDetail.id} onChange={this.onChangeHandler}/>
                     </div>
                     <div className='form-group'>
@@ -43,11 +46,13 @@ class Signup extends Component{
                         <input type="password" className='form-control' name="password" value={UserDetail.password} onChange={this.onChangeHandler}/>
                     </div>
                     <div className='form-group'>
-                        <button type="submit" className='btn btn-info'>Submit</button>
+                        <button type="submit" className='btn btn-info mt-2'>Submit</button>
                     </div>
                 </form>
                Already have an account?  <Link className="btn btn-success" to="/">Login</Link>
            </div>
+             </div>
+             </div>
             </>
         )
     }
