@@ -20,7 +20,9 @@ mongoose.connect("mongodb://localhost:27017/shoppingcartDB",{useNewUrlParser:tru
 // All express routes
 // method
 const loginRoute=require('./route/loginroute');
-
+const productRoute=require('./route/productroute');
+const productnewRoute=require('./route/productnewroute');
+const userRoute=require('./route/userroute');
 
 // converting incoming data to JSON format
 app.use(bodyParser.json());
@@ -34,7 +36,9 @@ const port=process.env.PORT || 8181;
 //routes configration
 // resgister
 app.use('/login',loginRoute);
-
+app.use('/products',productRoute);
+app.use('/productnew',productnewRoute);
+app.use('/userp',userRoute);
 
 const server=app.listen(port,function(){
     console.log("Server Listing on port "+port);
