@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Routing from './Routing';
+import Login2 from './Login2';
 function App() {
   return (
     <>
-    <h2>Project</h2>
+    {/* <Login2/> */}
     <Routing/>
     </>
   );

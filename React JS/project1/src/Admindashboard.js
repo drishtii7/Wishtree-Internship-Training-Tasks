@@ -110,6 +110,7 @@ class Admindashboard extends Component{
                 <Container fluid>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse className="justify-content-end">
+                <Nav.Link> <Link to="/users" className='btn btn-success'>Users</Link></Nav.Link>
                 <Nav.Link> <Link to="/login" className='btn btn-success'>Log out</Link></Nav.Link>
                 </Navbar.Collapse>
                 </Container>

@@ -3,22 +3,16 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
-import Login from './Login';
-import data1 from './Globaldata';
-class Userdashboard extends Component{
+class Dashboard1 extends Component{
     constructor(props){
         super(props);
         // let {uname} = this.props.route.params;
-        this.state = {ProductDetails:[],Stockdetails:[],productArr:{id:'',pname:'',description:'',price:''},counter:0,notify:'',newProdid:'',showSearch:'',newProd:[]};
+        this.state = {ProductDetails:[],productArr:{id:'',pname:'',description:'',price:''},counter:0,notify:'',newProdid:'',showSearch:'',newProd:[]};
     }
     showProducts(){
         axios.get("http://localhost:8181/products").then(response=>{
-            // console.log("Product data",response.data);
+            console.log("Product data",response.data);
              this.setState({ProductDetails:response.data});
-        })
-        axios.get("http://localhost:8181/mrstock").then(response=>{
-            // console.log("Product data",response.data);
-             this.setState({Stockdetails:response.data});
         })
     }
     componentDidMount(){
@@ -68,12 +62,11 @@ class Userdashboard extends Component{
     render(){
         // const {navigate}=this.props.navigation;
         // const user_name = navigate.getParam('uname','NO-User');
-        let {ProductDetails,counter,notify,newProdid,Stockdetails}=this.state;
+        let {ProductDetails,counter,notify,newProdid,showSearch}=this.state;
         return(
             <>
-      Username :  {data1.obj1}
             {/* <div>{JSON.stringify(user_name)}</div> */}
-            {/* <h2> ID {this.props.match.params.uname}</h2> */}
+            <h2>{this.props.match.params.id}</h2>
             <Navbar bg="light" expand="lg">
   <Container fluid>
   <Navbar.Toggle aria-controls="navbarScroll" />
@@ -96,7 +89,6 @@ class Userdashboard extends Component{
     </Navbar.Collapse>
   </Container>
   </Navbar>
-  <h2>Hii</h2>
            <div className="container">
            {notify===true?<h3 className='text-primary'>{counter} item added successfully.</h3>:null}
         </div>
@@ -126,4 +118,4 @@ class Userdashboard extends Component{
         )
     }
 }
-export default Userdashboard;
+export default Dashboard1;

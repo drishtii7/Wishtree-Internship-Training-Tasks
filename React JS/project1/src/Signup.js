@@ -5,7 +5,7 @@ class Signup extends Component{
     constructor()
     {
         super();
-        this.state = {UserDetail:{userName:'',password:''},notify:false};
+        this.state = {UserDetail:{userName:'',password:''},notify:'',msg:''};
     }
     onChangeHandler=(e)=>
     {
@@ -16,15 +16,23 @@ class Signup extends Component{
     }
     onSubmit=(e)=>{
         e.preventDefault();
-       // let {notify}=this.state;
-        this.setState({notify:true});
+       let {notify,UserDetail}=this.state;
+       if(UserDetail.userName == '' || UserDetail.password == ''){
+        this.setState({msg:'Username or password cannot be empty !'});
+       }
+       else{
+       notify=true;
+        this.setState({notify});
+        this.setState({msg:''});
+        console.log("notify",notify);
         const URL="http://localhost:8181/login/addUser";
         axios.post(URL,this.state.UserDetail).then(response=>{
             console.log(response.data);
         })
     }
+    }
     render(){
-        let {UserDetail,notify}=this.state;
+        let {UserDetail,notify,msg}=this.state;
         return(
             <>
             <div className='app'>
@@ -32,6 +40,7 @@ class Signup extends Component{
              <div className='login-form'>
              <div className='form'>
            <form onSubmit={this.onSubmit}>
+           <h6 className='text-danger'>{msg}</h6>
            <h4 className='text-center text-success'>Registration Form</h4>
                     <div className='form-group'>
                         <label>User Name</label>
@@ -41,14 +50,19 @@ class Signup extends Component{
                         <label>Password</label>
                         <input type="password" className='form-control' name="password" value={UserDetail.password} onChange={this.onChangeHandler}/>
                     </div>
+                    <br></br>
                     <div className='form-group'>
                         <button type="submit" className='btn btn-info mt-2'>Submit</button>
                     </div>
                 </form>
+                <br></br>
                Already have an account?  <Link className="btn btn-success" to="/login">Login</Link>
+               <br></br>
+               {notify==true?<div className='container conatiner-fluid alert alert-primary'> <span>Account created successfully.</span></div>:null}
            </div>
              </div>
              </div>
+            
             </>
         )
     }

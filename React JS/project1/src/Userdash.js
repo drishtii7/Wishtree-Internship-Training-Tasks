@@ -5,7 +5,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import Login from './Login';
 import data1 from './Globaldata';
-class Userdashboard extends Component{
+class Userdash extends Component{
     constructor(props){
         super(props);
         // let {uname} = this.props.route.params;
@@ -17,7 +17,7 @@ class Userdashboard extends Component{
              this.setState({ProductDetails:response.data});
         })
         axios.get("http://localhost:8181/mrstock").then(response=>{
-            // console.log("Product data",response.data);
+             console.log("Stock data",response.data);
              this.setState({Stockdetails:response.data});
         })
     }
@@ -39,8 +39,23 @@ class Userdashboard extends Component{
     onClickHandler=()=>{
         this.setState({showSearch:true});
     }
+    placeHandler=()=>
+    {
+        
+         axios.post("http://localhost:8181/order/addOrder",
+         {
+            "uname":data1.obj1,
+            "product":this.state.newProd,
+            "status":false,
+            "total_price":0
+         }).then(res=>{
+             console.log(res);
+
+         }).catch(err=>console.log(err));
+       
+    }
     onClickH=(prid)=>{
-        let {ProductDetails,productArr,counter,notify,newProd}=this.state;
+        let {ProductDetails,productArr,counter,notify,newProd,Stockdetails}=this.state;
         ProductDetails.forEach((item)=>{
             if(prid === item._id){
                 console.log("found cart id",item._id);
@@ -56,47 +71,40 @@ class Userdashboard extends Component{
                  console.log("new prod",newProd);
                  // productArr.push({""}) this.setstsa({...productarr})
 
-                console.log(productArr);
+                // console.log(productArr);
                 const URL="http://localhost:8181/productnew/addProductnew";
                 axios.post(URL,productArr).then(response=>{
-                console.log(response.data);
+                // console.log(response.data);
              }).catch(err=>console.log("product error :",err))
             }
 
         })
     }
     render(){
-        // const {navigate}=this.props.navigation;
-        // const user_name = navigate.getParam('uname','NO-User');
         let {ProductDetails,counter,notify,newProdid,Stockdetails}=this.state;
         return(
             <>
-      Username :  {data1.obj1}
-            {/* <div>{JSON.stringify(user_name)}</div> */}
-            {/* <h2> ID {this.props.match.params.uname}</h2> */}
+            {/* <h2>Welcome {data1.obj1}</h2> */}
             <Navbar bg="light" expand="lg">
   <Container fluid>
   <Navbar.Toggle aria-controls="navbarScroll" />
-    {/* <Navbar.Collapse id="navbarScroll"> */}
     <form>
               <center><input type="text" className='form-control  ml-2 p-4' value={newProdid} onChange={this.onChangeHandler} placeholder=' search your products here' />
-               {/* <button onClick={this.onClickHandler}>Search</button> */}
                </center> 
      </form>
     <Navbar.Collapse className="justify-content-end">
-      {/* <Nav
-        className="mr-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-      > */}
-        
-        <Nav.Link href="#action2"> <Link className="btn btn-primary" to='/cart1'>View Cart</Link></Nav.Link>
-        <Nav.Link href="#action2"> <Link to="/" className='btn btn-dark'>Logout</Link></Nav.Link>
+        <Nav.Link href="#action2">
+            <Link to="/ucart" ><span className="glyphicon glyphicon-log-in"></span>
+                <button className="btn btn-success me-3" onClick={this.placeHandler}>View Cart </button>
+            </Link>
+         </Nav.Link>
+         <Nav.Link> <Link to="/orders" className='btn btn-warning'>My Orders</Link></Nav.Link>
+        {/* <Nav.Link href="#action2"> <Link className="btn btn-primary" to='/cart1'>View Cart</Link></Nav.Link> */}
+        <Nav.Link href="#action2"> <Link to="/login" className='btn btn-dark'>Logout</Link></Nav.Link>
       {/* </Nav> */}
     </Navbar.Collapse>
   </Container>
   </Navbar>
-  <h2>Hii</h2>
            <div className="container">
            {notify===true?<h3 className='text-primary'>{counter} item added successfully.</h3>:null}
         </div>
@@ -109,11 +117,23 @@ class Userdashboard extends Component{
                            <h3 className='product-name'>{item.pname}</h3>
                        </div>
                        <div>
-                           <h3 className='product-desc'>{item.description}</h3>
+                           <h4 className='product-desc'>{item.description}</h4>
                        </div>
                        <div>
-                           <h3 className='product-price'>{item.price}</h3>
+                           <h3 className='product-price'> Rs. {item.price}</h3>
                        </div>
+                       {/* <div>
+                       {Stockdetails.map((item2,idx)=>{
+                            return(
+                                item.pname === item2.pname &&
+                                (
+                                <tr key={idx}>
+                                <td>{item2.qty}</td>
+                            </tr>
+                                )
+                            )
+                        })}
+                       </div> */}
                        <div>
                            <button className='product-add-button' onClick={()=>this.onClickH(item._id)}>Add to cart</button>
                        </div>
@@ -126,4 +146,4 @@ class Userdashboard extends Component{
         )
     }
 }
-export default Userdashboard;
+export default Userdash;

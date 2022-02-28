@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import {useEffect} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import data1 from './Globaldata';
 function Login() {
 const [userdata,setUser]=useState([]);
 const [userId, setUserId] = useState();
 const [password, setPassword] = useState();
+const [uData,setUData]=useState();
 const [msg,setMsg]=useState('');
+const [notifylogin,setNotify]=useState();
 const getUdata = ()=>{
     axios.get("http://localhost:8181/login").then(response=>{
             console.log(response.data);
@@ -23,13 +26,16 @@ useEffect(()=>{
 const navigate = useNavigate();
     const onSubmit =()=>{
         console.log("submit", userId,password);
+        let uData = {uname:'',prname:'',descp:'',prductprice:''};
+        data1.obj1=userId;
+        // console.log("USERNAME",data1.obj1);
         userdata.forEach((item)=>{
         if(userId ===item.userName && password===item.password && item.adminfound === false)
         {
             console.log("user login");
-           navigate("/userdashboard");
+           navigate("/userdash");
         }
-       else  if (userId === "admin1" && password=== "adminpwd" && item.adminfound === true){
+       else  if (userId === item.userName && password=== item.password && item.adminfound === true){
             console.log("admin dash");
             navigate("/admin");
         }
@@ -38,18 +44,7 @@ const navigate = useNavigate();
         }
         })
     }
-//const onSubmit =()=>{
-   // console.log("submit", userId,password);
-   // userdata.forEach((item)=>{
-   // if(userId ===item.username && password===item.password)
-    //{
-       // navigate("/dashboard");
-    //}
-    //else{
-        //setMsg("Enter Valid Username or Password");
-    //}
-    //})
-//}
+
 
     return (
         <>
@@ -73,7 +68,8 @@ const navigate = useNavigate();
                     <button type="submit" className='btn btn-success'>Submit</button>
                 </div>
             </form>
-            <Link className="btn btn-primary mt-2" to="/signup">Register here</Link>
+            <br></br>
+            <Link to="/signup">Register here</Link>
                  </div>
              </div>
          </div>

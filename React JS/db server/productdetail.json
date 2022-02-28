@@ -11,6 +11,12 @@
       "pname": "Product3",
       "description": "Description3",
       "price": 4000
+    },
+    {
+      "id": "104",
+      "pname": "Product4",
+      "description": "description4",
+      "price": "6000"
     }
   ]
 }
