@@ -122,7 +122,7 @@ class Userdash extends Component{
                        <div>
                            <h3 className='product-price'> Rs. {item.price}</h3>
                        </div>
-                       {/* <div>
+                       <div>
                        {Stockdetails.map((item2,idx)=>{
                             return(
                                 item.pname === item2.pname &&
@@ -133,7 +133,7 @@ class Userdash extends Component{
                                 )
                             )
                         })}
-                       </div> */}
+                       </div>
                        <div>
                            <button className='product-add-button' onClick={()=>this.onClickH(item._id)}>Add to cart</button>
                        </div>
