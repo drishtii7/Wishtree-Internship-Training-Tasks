@@ -11,6 +11,9 @@ export class Vendor {
     @Prop()
     phone:number;
 
+    @Prop([String])
+    productlist:string[];
+
 }
 
 export const VendorSchema = SchemaFactory.createForClass(Vendor)

@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, Delete } from "@nestjs/common";
+import { Controller, Get, Param, Post, Body, Delete, Put } from "@nestjs/common";
 import { VendorService } from './Vendor.Service';
 import { VendorDTO } from './VendorDTO';
 @Controller('/vendor')
@@ -21,5 +21,11 @@ export class VendorController{
     @Get(':vid')
     async getVendor(@Param('vid') vid:string){
         return this.vendorService.getVendor(vid);
+    }
+   
+    @Put('/:mrname/:id')
+    update(@Param('mrname') mrname:string, @Param('id') id:string):any
+    {
+      return this.vendorService.update(mrname,id);
     }
 }
