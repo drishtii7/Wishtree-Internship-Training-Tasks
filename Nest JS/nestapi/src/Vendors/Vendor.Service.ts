@@ -40,7 +40,7 @@ export class VendorService {
         return  await this.vendorModel.findByIdAndUpdate({_id:id},{$push:{productlist:myproducts}});
     }
     
-
+// for update
     async createVendor(vendorDto: VendorDTO)
     {
         return await this.vendorModel.create(vendorDto)
